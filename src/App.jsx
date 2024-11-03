@@ -6,7 +6,6 @@ import DashboardPage from "./pages/DashboardPage";
 
 const App = () => {
   const [dashboardMode, setDashboardMode] = useState(false);
-  console.log("dashboardMode - - - - - ", dashboardMode);
   return (
     <>
       <Navbar

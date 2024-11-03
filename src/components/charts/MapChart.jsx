@@ -40,13 +40,10 @@ const MapChart = ({
     fetch("https://code.highcharts.com/mapdata/countries/us/us-all.topo.json")
       .then((response) => response.json())
       .then((data) => {
-        console.log("Fetched topology data:", data); // Log the fetched data
         setTopology(data);
       })
       .catch((error) => console.error("Error loading topology data:", error));
   }, []);
-
-  console.log("Data for map bubbles:", data); // Log the data for bubbles
 
   const options = topology
     ? {

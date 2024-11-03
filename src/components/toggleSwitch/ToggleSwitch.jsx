@@ -5,27 +5,25 @@ const ToggleSwitch = (props) => {
     props?.setDashboardMode(e.target.checked);
   };
 
-  console.log("dashboardMode", props?.dashboardMode);
-
   return (
     <>
-      <div class="toggle-container">
+      <div className="toggle-container">
         <input
-          class="toggle-input"
+          className="toggle-input"
           type="checkbox"
           onChange={handleToggle}
           value={props?.dashboardMode}
         />
-        <div class="toggle-handle-wrapper">
-          <div class="toggle-handle">
-            <div class="toggle-handle-knob"></div>
-            <div class="toggle-handle-bar-wrapper">
-              <div class="toggle-handle-bar"></div>
+        <div className="toggle-handle-wrapper">
+          <div className="toggle-handle">
+            <div className="toggle-handle-knob"></div>
+            <div className="toggle-handle-bar-wrapper">
+              <div className="toggle-handle-bar"></div>
             </div>
           </div>
         </div>
-        <div class="toggle-base">
-          <div class="toggle-base-inside"></div>
+        <div className="toggle-base">
+          <div className="toggle-base-inside"></div>
         </div>
       </div>
     </>

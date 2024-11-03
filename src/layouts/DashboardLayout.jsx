@@ -12,8 +12,6 @@ import LatLongMap from "../components/maps/LatLongMap";
 const DashboardLayout = (props) => {
   const [dashboardMode, setDashboardMode] = useState(props.dashboardMode);
 
-  console.log("dashboardMode - -", dashboardMode);
-
   useEffect(() => {
     setDashboardMode(props.dashboardMode);
   }, [props.dashboardMode]);
@@ -108,8 +106,6 @@ const DashboardLayout = (props) => {
       color: "#0071B3",
     },
   ];
-
-  console.log(DonutChartData);
 
   const MapData = [
     { lat: 34.0522, lon: -118.2437, value: 100 },

@@ -9,7 +9,9 @@ const DashboardPage = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/Electric_Vehicle_Population_Data.csv");
+        const response = await fetch(
+          "/mapupproject/Electric_Vehicle_Population_Data.csv"
+        );
         const csvData = await response.text();
         Papa.parse(csvData, {
           header: true,
@@ -104,8 +106,6 @@ const DashboardPage = (props) => {
   };
 
   const { maxRange, minRange } = calculateRangeExtremes(data);
-  console.log("Max Electric Range:", maxRange);
-  console.log("Min Electric Range:", minRange);
 
   const calculateMsrpExtremes = (data) => {
     let maxMsrp = -Infinity;
@@ -136,8 +136,6 @@ const DashboardPage = (props) => {
   };
 
   const { maxMsrp, minMsrp } = calculateMsrpExtremes(data);
-  console.log("Max Base MSRP:", maxMsrp);
-  console.log("Min Base MSRP:", minMsrp);
 
   const calculateAverage = (field) => {
     let total = 0;
@@ -338,7 +336,6 @@ const DashboardPage = (props) => {
 
   // Example usage:
   const cityCounts = getCityNameCounts(data);
-  console.log("City Name Counts:", cityCounts);
 
   const extractVehicleLocationByMakeAndModelYear = (
     data,
@@ -391,7 +388,6 @@ const DashboardPage = (props) => {
     data,
     selectedVehicle
   );
-  console.log("Vehicle Locations:", selectedVehicleLocations);
 
   return (
     <DashboardLayout
