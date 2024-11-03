@@ -1,0 +1,80 @@
+.sidebar {
+  width: 250px;
+  background-color: #f9fafb;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #e0e0e0;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #3b3f47;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  color: #3b3f47;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item.active,
+.menu-item:hover {
+  background-color: #e9f2ff;
+  color: #1a73e8;
+}
+
+/* .icon {
+  font-size: 1.25rem;
+  margin-right: 1rem;
+} */
+
+.sidebar-footer {
+  padding: 1.5rem;
+  background-color: #e0e0e0;
+}
+
+.upgrade-box {
+  text-align: center;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.upgrade-box p {
+  font-size: 0.875rem;
+  color: #3b3f47;
+  margin: 0;
+}
+
+.upgrade-btn {
+  margin-top: 0.5rem;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upgrade-btn:hover {
+  background-color: #0f5bb5;
+}
